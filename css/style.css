@@ -1,0 +1,487 @@
+:root {
+    --btnColor: #3f8ddb;
+    --btnHoverColor: #266bab;
+}
+
+
+/* --- Общие стили --- */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #121212;
+    background-color: #f4f7f9;
+}
+
+/* Side Navigation слева, вертикально с поворотом текста */
+.side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* центрируем по вертикали */
+    align-items: center;
+    z-index: 1000;
+    padding: 0; /* убираем внутренние отступы */
+}
+
+.side-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* пункты сверху вниз */
+    gap: 80px; /* расстояние между пунктами */
+}
+
+.side-nav li {
+    transform: rotate(-90deg); /* поворот текста вертикально */
+    transform-origin: left top; /* точка вращения */
+    
+}
+
+.side-nav a {
+    color: #121212;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: var(--btnHoverColor);
+}
+
+
+
+h2 {
+    position : relative;
+    font-size: 32px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    color: #121212;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--btnHoverColor);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s ease;
+}
+h2:hover::after {
+    width: 100%;
+}
+
+.title {
+    position : relative;
+    font-size: 32px;
+    text-align: right;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    color: #121212;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--btnHoverColor);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.5s ease;
+}
+.title:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px; /* оставляем место для панели */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 { animation: fadeInUp 1s ease forwards; }
+.hero-content p { animation: fadeInUp 2s ease forwards;  margin-bottom: 3vh;}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    background: var(--btnColor);
+    color: #fff;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.btn:hover { background: var(--btnHoverColor); }
+
+/* --- Hero animation --- */
+.hero-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    /* background: radial-gradient(circle, rgba(30,144,255,0.2) 0%, transparent 70%); */
+    z-index: -1;
+}
+
+/* --- Sections --- */
+section {
+    padding: 80px 0; 
+    margin: 0 100px 0 160px ;
+    background: radial-gradient(circle, rgba(30,144,255,0.2) 0%, transparent 70%);
+
+} /* отступ для панели */
+
+.member, .skill, .project-card {
+    background: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover, .member:hover, .project-card:hover { box-shadow: 0 10px 30px rgba(30,144,255,0.3); }
+
+
+/* --- Slider --- */
+
+.oursite {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+
+
+/* SLIDER LEFT (50% width) */
+.slider-wrapper {
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+    margin: 130px 0 40px 30px; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* TEXT RIGHT (50%) */
+.project-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.project-skills ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.project-skills li {
+    margin-bottom: 6px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:var(--btnColor);
+    border: none;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 6px;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover { background: var(--btnHoverColor); }
+
+.left-btn { left: 0; }
+.right-btn { right: 0; }
+
+
+
+
+.description {
+    display: flex;
+    justify-content: right;
+    margin-right: 100px;
+    font-size: 23px;
+}
+
+
+.projects {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+/* GRID 2x2 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+/* EACH PROJECT – FLEX LEFT/RIGHT */
+.project {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* SLIDER */
+.project-slider-wrapper {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-slider {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.project-slider img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+/* ARROWS */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    font-size: 32px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* PROJECT INFO RIGHT */
+.project-info1 {
+    width: 50%;
+}
+
+.project-info1 h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.project-info1 a {
+    color: #121212;
+    /* text-decoration: none; */
+    font-weight: bold;
+}
+
+.skills {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.skills li {
+    margin-bottom: 6px;
+}
+
+
+.about {
+    padding: 80px 0;
+}
+
+/* Team member layout */
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+/* Reverse row for Liliia */
+.team-member.reverse-row {
+    flex-direction: row;
+}
+
+
+
+/* Photo 25% */
+.team-member .team-photo {
+    width: 250px;          
+    height: 250px;          
+    object-fit: cover;    
+    border-radius: 50%;   
+    display: block;
+}
+
+
+/* Text 75% */
+.team-member .info {
+    width: 75%;
+}
+
+/* Horizontal direction blocks */
+.directions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.direction {
+    flex: 1 1 200px;
+    background: #ffffffc7;
+    color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+.direction .icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    transition: transform 0.3s, fill 0.3s;
+}
+
+.direction:hover {
+    transform: translateY(-5px);
+    background: #ffffffac;
+}
+
+.direction:hover .icon {
+    transform: scale(1.2);
+    fill: #939291bb; /* иконка меняет цвет при hover */
+}
+
+
+/* Three columns of qualities */
+.qualities {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.qualities .column {
+    flex: 1 1 250px;
+}
+
+.qualities h4 {
+    margin-bottom: 10px;
+}
+
+.qualities ul {
+    padding-left: 20px;
+}
+
+.qualities li {
+    margin-bottom: 6px;
+}
+
+
+
+/* Footer */
+.footer { text-align: center; padding: 30px 0; background: #f5f5f5; }
+
+/* --- Animations --- */
+@keyframes fadeInUp { 0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);} }
+@keyframes float { 0%,100%{transform:translate(0,0);} 50%{transform:translate(20px,20px);} }
+
+/* Skills grid */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; }
+.skill { padding: 15px; border-radius: 8px; text-align: center; }
+
+
+/* ADAPTIVE */
+@media (max-width: 1100px) {
+    .title, h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+    .project {
+        flex-direction: column;
+    }
+    .project-info1,
+    .project-slider-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .oursite {
+        flex-direction: column;
+    }
+
+    .slider-wrapper,
+    .project-info {
+        width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        flex-direction: column;
+    }
+    .team-member .photo,
+    .team-member .info {
+        width: 100%;
+    }
+
+    .directions {
+        flex-direction: column;
+    }
+
+    .qualities {
+        flex-direction: column;
+    }
+}
