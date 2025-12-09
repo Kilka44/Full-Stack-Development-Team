@@ -206,7 +206,7 @@ section {
 
 .project-info {
     max-width: 1200px;
-    /* margin: auto; */
+    margin: auto;
     padding: 0 20px;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
