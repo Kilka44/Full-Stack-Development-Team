@@ -25,36 +25,41 @@
             <h1>Full-Stack Development Team</h1>
             <p><strong>Liliia Zykova & Hayk Sakoyan</strong></p>
             <p>Crafting modern, scalable web solutions with a focus on performance, usability, and clean code.</p>
-            <a href="#contact" class="btn">Get in Touch</a>
         </div>
         <div class="hero-animation"></div>
     </section>
 
     <!-- Our Site Section -->
-    <section class="oursite container" id="oursite">
-
-        <!-- SLIDER LEFT -->
-        <div class="slider-wrapper">
-            <button class="slider-btn left-btn">&#10094;</button>
-            <div class="slider">
-                <img src="assets/images/screenshot1.png" class="slide active">
-                <img src="assets/images/screenshot2.png" class="slide">
-                <img src="assets/images/screenshot3.png" class="slide">
+    <section class="projet-slider" id="oursite">
+        <div class="left-column">
+            <div class="project-info">
+                <h2 class="title">Our Project: Dramwise</h2>
             </div>
-            <button class="slider-btn right-btn">&#10095;</button>
+            <div class="project-description">
+                <p>
+                    We developed this website completely from scratch ourselves. It is the result of a fruitful
+                    collaboration, combining our extensive experience in both frontend and backend development. Our main
+                    goal was to deliver a clean, fast, and highly functional web resource for Dramwise that ensures
+                    convenience and efficiency for all users. 
+                </p>
+            </div>
         </div>
+        <div class="right-column">
+            <div class="slider-wrapper">
+                <button class="slider-btn left-btn">&#10094;</button>
+                <div class="slider">
+                    <img src="assets/images/screenshot1.png" class="slide active">
+                    <img src="assets/images/screenshot2.png" class="slide">
+                    <img src="assets/images/screenshot3.png" class="slide">
+                </div>
+                <button class="slider-btn right-btn">&#10095;</button>
+            </div>
 
-        <!-- TEXT RIGHT -->
-        <div class="project-info">
-            <h2 class="title">Our Project: Dramwise</h2>
-            <p>
-                This platform was developed collaboratively, combining frontend and backend experience
-                to deliver a clean, fast and functional website for Dramwise.
-            </p>
+
 
             <div class="project-skills">
                 <h3>Technologies & Skills Used:</h3>
-                <ul>
+                <ul class="project-skills-list">
                     <li>HTML5 & CSS3</li>
                     <li>JavaScript (ES6+)</li>
                     <li>Responsive Web Architecture</li>
@@ -65,8 +70,8 @@
                     <li>Git & GitHub Workflow</li>
                 </ul>
             </div>
-
         </div>
+
 
     </section>
 
@@ -192,84 +197,114 @@
     </section>
 
     <!-- About Section -->
-   <section class="about container" id="about">
-    <h2>About Us</h2>
+    <section class="about container" id="about">
+        <h2>About Us</h2>
 
-    <!-- Liliia -->
-    <div class="team-member reverse-row">
-<img src="assets/images/Liliia.jpg" alt="Liliia Zykova" class="team-photo">
-        <div class="info">
-            <h3>Liliia Zykova</h3>
-            <p>Frontend Developer</p>
-            <p>Experienced Frontend Developer specializing in HTML, CSS, and JavaScript. Skilled in WordPress, Tilda, PHP, Git, and GitHub. Passionate about building responsive, accessible, and visually appealing web applications.</p>
+        <!-- Liliia -->
+        <div class="team-member reverse-row">
+            <img src="assets/images/Liliia.jpg" alt="Liliia Zykova" class="team-photo">
+            <div class="info">
+                <div class="name-row">
+                    <h3>Liliia Zykova</h3>
+                    <a href="https://github.com/Kilka44" class="github-link" target="_blank" aria-label="Liliia GitHub">
+                        <svg class="github-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3 0-.3-.5-1.5.1-3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.4-1.2 3.4-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.7 1 .7 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.8C23.5 5.7 18.3.5 12 .5z" />
+                        </svg>
+                    </a>
+                </div>
+                <p>Frontend Developer</p>
+                <p>Experienced Frontend Developer specializing in HTML, CSS, and JavaScript. Skilled in WordPress,
+                    Tilda, PHP, Git, and GitHub. Passionate about building responsive, accessible, and visually
+                    appealing web applications.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Hayk -->
-    <div class="team-member">
-        <div class="info">
-            <h3>Hayk Sakoyan</h3>
-            <p>Backend Developer (6+ years experience)</p>
-            <p>Backend Developer with professional experience in Python, SQL, and Node.js. Proficient in API development, database architecture, and building scalable backend systems. Experienced in supporting agencies and delivering robust, production-ready solutions.</p>
+        <!-- Hayk -->
+        <div class="team-member">
+            <div class="info">
+                <div class="name-row">
+                    <h3>Hayk Sakoyan</h3>
+                    <a href="https://github.com/Hayk-21" class="github-link" target="_blank" aria-label="Hayk GitHub">
+                        <svg class="github-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3 0-.3-.5-1.5.1-3 0 0 1-.3 3.4 1.2 1-.3 2-.4 3-.4s2 .1 3 .4c2.3-1.5 3.4-1.2 3.4-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.7 1 .7 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.8C23.5 5.7 18.3.5 12 .5z" />
+                        </svg>
+                    </a>
+                </div>
+                <p>Backend Developer (6+ years experience)</p>
+                <p>Backend Developer with professional experience in Python, SQL, and Node.js. Proficient in API
+                    development, database architecture, and building scalable backend systems. Experienced in supporting
+                    agencies and delivering robust, production-ready solutions.</p>
+            </div>
+            <img src="assets/images/hayk.jpg" alt="Hayk Sakoyan" class="team-photo">
+
         </div>
-        <img src="assets/images/hayk.jpg" alt="Hayk Sakoyan" class="team-photo">
 
-    </div>
-
-    <!-- Horizontal blocks with directions -->
-    <div class="directions">
-    <div class="direction">
-        <img class="icon" src="assets/icons/browser.svg" alt="Web Development Icon">
-        Web Development 
-    </div>
-    <div class="direction">
-        <img class="icon" src="assets/icons/ui.svg" alt="UI/UX Design Icon">
-        UI/UX Design
-    </div>
-    <div class="direction">
-        <img class="icon" src="assets/icons/api.svg" alt="API Icon">
-        API Integration
-    </div>
-    <div class="direction">
-        <img class="icon" src="assets/icons/database.svg" alt="Database Icon">
-        Database Architecture
-    </div>
-</div>
-
-
-    <!-- Three columns of common qualities -->
-    <div class="qualities">
-        <div class="column">
-            <h4>We've had experiences with</h4>
-            <ul>
-                <li>HTML, CSS, JS</li>
-                <li>WordPress / Tilda</li>
-                <li>Node.js / Python</li>
-            </ul>
+        <!-- Horizontal blocks with directions -->
+        <div class="directions">
+            <div class="direction">
+                <img class="icon" src="assets/icons/browser.svg" alt="Web Development Icon">
+                Web Development
+            </div>
+            <div class="direction">
+                <img class="icon" src="assets/icons/ui.svg" alt="UI/UX Design Icon">
+                UI/UX Design
+            </div>
+            <div class="direction">
+                <img class="icon" src="assets/icons/api.svg" alt="API Icon">
+                API Integration
+            </div>
+            <div class="direction">
+                <img class="icon" src="assets/icons/database.svg" alt="Database Icon">
+                Database Architecture
+            </div>
         </div>
-        <div class="column">
-            <h4>We have years of experience with</h4>
-            <ul>
-                <li>Frontend & Backend Development</li>
-                <li>API design</li>
-                <li>Database architecture</li>
-            </ul>
+
+
+        <!-- Three columns of common qualities -->
+        <div class="qualities">
+            <div class="column">
+                <h4>Frontend</h4>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>WordPress / Tilda</li>
+                    <li>React</li>
+                    <li>Pixso, Figma</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Backend</h4>
+                <ul>
+                    <li>Node.js, Python</li>
+                    <li>Express, FastAPI, Flask</li>
+                    <li>REST API</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>AI & Automations</h4>
+                <ul>
+                    <li>Python, PyTorch, TensorFlow, Keras</li>
+                    <li>OpenAI API, Fine-Tuning</li>
+                    <li>Telegram Bot API, Webhooks</li>
+                    <li>Bot + AI Integration</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Data & Infrastructure</h4>
+                <ul>
+                    <li>PostgreSQL, MySQL, SQLite, MongoDB</li>
+                    <li>Docker, CI/CD (GitHub Actions/GitLab CI)</li>
+                    <li>Google Cloud, Linux Servers</li>
+                </ul>
+            </div>
         </div>
-        <div class="column">
-            <h4>We work and study about</h4>
-            <ul>
-                <li>Responsive & adaptive design</li>
-                <li>Performance optimization</li>
-                <li>Latest web technologies</li>
-            </ul>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- Footer -->
     <footer class="footer container">
-        <p>© 2025 Liliia & Hayk. All rights reserved.</p>
+        <p>© 2025 Liliia & Hayk.</p>
     </footer>
 
     <script src="js/script.js"></script>

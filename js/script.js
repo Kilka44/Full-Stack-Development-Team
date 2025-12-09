@@ -7,57 +7,65 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// === MAIN SLIDER (Our Project) ===
 
+(function () {
+    const slider = document.querySelector('.slider'); // OK, class exists
+    if (!slider) return;
 
-const slides = document.querySelectorAll('.slide');
-const leftBtn = document.querySelector('.left-btn');
-const rightBtn = document.querySelector('.right-btn');
+    const slides = slider.querySelectorAll('.slide');
+    const leftBtn = document.querySelector('.left-btn');  // FIX class exists
+    const rightBtn = document.querySelector('.right-btn'); // FIX class exists
 
-let currentIndex = 0;
-
-function showSlide(index) {
-    const slider = document.querySelector('.slider');
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
-    currentIndex = index;
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-leftBtn.addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-});
-
-rightBtn.addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-});
-
-
-
-
-const sliders = document.querySelectorAll(".project-slider");
-
-sliders.forEach(slider => {
     let index = 0;
-    const slides = slider.querySelectorAll("img");
-    const project = slider.dataset.project;
 
-    const leftBtn = document.querySelector(`.arrow.left[data-project="${project}"]`);
-    const rightBtn = document.querySelector(`.arrow.right[data-project="${project}"]`);
-
-    function updateSlider() {
-        slider.style.transform = `translateX(-${index * 100}%)`;
+    function showSlide(i) {
+        slides.forEach((s, n) => s.classList.toggle('active', n === i));
     }
 
-    rightBtn.addEventListener("click", () => {
-        index = (index + 1) % slides.length;
-        updateSlider();
-    });
+    if (leftBtn) {
+        leftBtn.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+    }
 
-    leftBtn.addEventListener("click", () => {
-        index = (index - 1 + slides.length) % slides.length;
-        updateSlider();
-    });
+    if (rightBtn) {
+        rightBtn.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        });
+    }
+})();
+
+
+// === PROJECT SLIDERS (Other Projects) ===
+
+document.querySelectorAll('.project').forEach(project => {
+    const slider = project.querySelector('.project-slider');
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.slide');
+    const left = project.querySelector('.arrow.left');
+    const right = project.querySelector('.arrow.right');
+
+    let index = 0;
+
+    function show(i) {
+        slides.forEach((s, n) => s.classList.toggle('active', n === i));
+    }
+
+    if (left) {
+        left.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            show(index);
+        });
+    }
+
+    if (right) {
+        right.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            show(index);
+        });
+    }
 });
-
-
-
