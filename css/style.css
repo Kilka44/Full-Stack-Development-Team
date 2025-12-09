@@ -631,6 +631,10 @@ section {
     .directions {
         gap: 15px;
     }
+
+    .name-row {
+         justify-content: center;
+    }
 }
 
 @media (max-width: 720px) {
