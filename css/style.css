@@ -693,7 +693,7 @@ section {
 
 @media (max-width: 450px) {
     section {
-    margin: 0 5px 0 70px ;
+    margin: 0 5px 0 90px ;
     }
     .hero {
         background: radial-gradient(circle, rgba(30,144,255,0.2) 0%, transparent 30%);
